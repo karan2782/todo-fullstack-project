@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <select  id="user-role">
+            <option value="author">Author</option>
+            <option value="reader">Reader</option>
+        </select>
+        <input type="submit">
+    </form>
+</body>
+
+<script>
+    const form = document.getElementById('form')
+    const register = async (e)=>{
+        e.preventDefault()
+        const username=document.getElementById('username').value 
+        const password =document.getElementById('password').value 
+        const user_role = document.getElementById('user-role').value
+        const baseurl = 'http://127.0.0.1:8000/todo'
+        if (!username || !password || !user_role){
+            alert("Please fill all fields!")
+            return 
+        }
+        try {
+            const res = await fetch(`${baseurl}/register/`,{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({username, password, user_role})
+            })
+            
+            const data = await res.json()
+            if (!res.ok){
+                // console.log(data)
+                alert(data.message)
+                return
+            }
+            else{
+                alert(data.message)
+                window.location.href = 'login.html'
+            }
+            
+        } catch (error) {
+            console.log('something went wrong in registration!')
+        }
+    }
+
+    form.addEventListener('submit', register)
+</script>
+</html>
