@@ -56,3 +56,4 @@ webencodings==0.5.1
 whitenoise==6.7.0
 wikipedia==1.4.0
 yfinance==0.2.41
+mysqlclient==2.1.0
