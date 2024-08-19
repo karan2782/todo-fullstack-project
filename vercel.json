@@ -28,6 +28,10 @@
         "src": "/api/(.*)",
         "dest": "todo_project/wsgi.py"
       }
-    ]
+    ],
+    "rewrites": [
+    { "source": "/api/(.*)", "destination": "/backend/wsgi.py" }
+  ]
   }
   
+ 
