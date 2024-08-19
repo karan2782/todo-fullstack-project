@@ -24,7 +24,7 @@
         "dest": "frontend/task.html"
       },
       {
-        "src": "/api/(.*)",
+        "src": "/todo/(.*)",
         "dest": "todo_project/wsgi.py"
       }
     ]
