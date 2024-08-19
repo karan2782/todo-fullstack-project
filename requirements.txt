@@ -25,7 +25,7 @@ kiwisolver==1.4.5
 lxml==5.2.2
 matplotlib==3.9.1
 multitasking==0.0.11
-mysqlclient==2.2.4
+
 numpy==2.0.1
 packaging==24.1
 pandas==2.2.2
@@ -56,7 +56,7 @@ webencodings==0.5.1
 whitenoise==6.7.0
 wikipedia==1.4.0
 yfinance==0.2.41
-mysqlclient==2.1.0
+
 Django>=4.2,<5.0
 djangorestframework>=3.14,<4.0
 sqlite3  # or just omit the database package, as SQLite is built-in
