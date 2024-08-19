@@ -57,3 +57,6 @@ whitenoise==6.7.0
 wikipedia==1.4.0
 yfinance==0.2.41
 mysqlclient==2.1.0
+Django>=4.2,<5.0
+djangorestframework>=3.14,<4.0
+sqlite3  # or just omit the database package, as SQLite is built-in
