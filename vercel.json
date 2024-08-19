@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "todo_project/wsgi.py",
+        "use": "@vercel/python"
+      },
+      {
+        "src": "frontend/*.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "frontend/index.html"
+      },
+      {
+        "src": "/login",
+        "dest": "frontend/login.html"
+      },
+      {
+        "src": "/task",
+        "dest": "frontend/task.html"
+      },
+     
+      {
+        "src": "/api/(.*)",
+        "dest": "todo_project/wsgi.py"
+      }
+    ]
+  }
+  
