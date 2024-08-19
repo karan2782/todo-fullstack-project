@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "todo_project/wsgi.py",
+        "src": "todo_project/todo_project/wsgi.py",
         "use": "@vercel/python"
       },
       {
@@ -25,7 +25,7 @@
       },
       {
         "src": "/todo/(.*)",
-        "dest": "todo_project/wsgi.py"
+        "dest": "todo_project/todo_project/wsgi.py"
       }
     ]
   }
